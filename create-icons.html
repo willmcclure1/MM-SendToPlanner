@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+</head>
+<body>
+    <canvas id="canvas16" width="16" height="16" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <canvas id="canvas32" width="32" height="32" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    <canvas id="canvas80" width="80" height="80" style="border: 1px solid #ccc; margin: 10px;"></canvas>
+    
+    <script>
+        function createIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background
+            ctx.fillStyle = '#0078D4';
+            ctx.fillRect(0, 0, size, size);
+            
+            // White envelope icon
+            ctx.strokeStyle = 'white';
+            ctx.fillStyle = 'white';
+            ctx.lineWidth = Math.max(1, size / 16);
+            
+            const margin = size * 0.2;
+            const envWidth = size - (margin * 2);
+            const envHeight = envWidth * 0.6;
+            const envX = margin;
+            const envY = (size - envHeight) / 2;
+            
+            // Envelope body
+            ctx.fillRect(envX, envY, envWidth, envHeight);
+            
+            // Envelope flap
+            ctx.beginPath();
+            ctx.moveTo(envX, envY);
+            ctx.lineTo(envX + envWidth/2, envY + envHeight/2);
+            ctx.lineTo(envX + envWidth, envY);
+            ctx.strokeStyle = '#0078D4';
+            ctx.lineWidth = Math.max(1, size / 32);
+            ctx.stroke();
+            
+            return canvas.toDataURL('image/png');
+        }
+        
+        // Generate icons
+        const icon16 = createIcon('canvas16', 16);
+        const icon32 = createIcon('canvas32', 32);
+        const icon80 = createIcon('canvas80', 80);
+        
+        console.log('Copy these data URLs to create your icon files:');
+        console.log('16x16:', icon16);
+        console.log('32x32:', icon32);
+        console.log('80x80:', icon80);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "buildDate": "2025-09-09T01:51:05.410Z",
+  "nodeVersion": "v20.19.2",
+  "files": [
+    {
+      "name": "dist/taskpane.html",
+      "size": 2845
+    },
+    {
+      "name": "dist/taskpane.js",
+      "size": 300309
+    },
+    {
+      "name": "dist/commands.html",
+      "size": 334
+    },
+    {
+      "name": "dist/commands.js",
+      "size": 103
+    },
+    {
+      "name": "dist/manifest.xml",
+      "size": 3840
+    }
+  ]
+}

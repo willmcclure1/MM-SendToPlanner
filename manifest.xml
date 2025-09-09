@@ -9,10 +9,10 @@
   <ProviderName>MMPL</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Send to Planner" />
-  <Description DefaultValue="Send emails to Microsoft Planner boards and sync comments back" />
+  <Description DefaultValue="Send emails to Microsoft Planner boards" />
   <IconUrl DefaultValue="https://willmcclure1.github.io/MM-SendToPlanner/assets/icon-32.png" />
   <HighResolutionIconUrl DefaultValue="https://willmcclure1.github.io/MM-SendToPlanner/assets/icon-80.png" />
-  <SupportUrl DefaultValue="mailto:security@mml.com.au" />
+  <SupportUrl DefaultValue="https://github.com/willmcclure1/MM-SendToPlanner" />
 
   <Hosts>
     <Host Name="Mailbox" />
@@ -28,7 +28,7 @@
     <Form xsi:type="ItemRead">
       <DesktopSettings>
         <SourceLocation DefaultValue="https://willmcclure1.github.io/MM-SendToPlanner/taskpane.html" />
-        <RequestedHeight>250</RequestedHeight>
+        <RequestedHeight>300</RequestedHeight>
       </DesktopSettings>
     </Form>
   </FormSettings>
